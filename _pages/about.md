@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: ML Research @ <a href='https://www.mpie.de/'>Max Planck Institute for sustainable Materials</a>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Max-Planck-Institut für Nachhaltige Materialien GmbH</p>
+    <p>Max-Planck-Straße 1</p>
+    <p>40237 Düsseldorf</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +27,17 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hey, thanks for stopping by! 👋
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I’m a Phd Candidate at the [MPI of sustainable Materials](https://www.mpie.de/). 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+My focus lies on solving challenging problems at the intersection of AI & Matrial Science, 
+with the vision to build a Foundational Model able to incorporate all scales of Material Design, from atomistic to processing, eventually building a fully-integrated AI platform for material discovery.
+
+As a scientist, I’m broadly interested in all aspects of machine learning, and particularly in self correcting active learning optimization with foundation models, robust and scalable data-driven systems, and applications to natural and engineering sciences. 
+
+My goal is contribute to a more productive industry through automation and thus a sustainable future.
+
+I am also a lecturer at the [Heinrich-Heine-University](https://www.studierendenakademie.hhu.de/studium-universale) holding a seminar on the foundations of LLMs and their applications twice each semester.
+
+In my spare time, I enjoy doing sports (mostly weights and cross fit), traveling and exploring new places and activities, and the best food spots in Düsseldorf.
