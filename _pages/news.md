@@ -4,4 +4,4 @@ title: news
 permalink: /news/
 ---
 
-{% include news.liquid %}
+Hello, this website just launched :)
