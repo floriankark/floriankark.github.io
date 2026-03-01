@@ -2,20 +2,20 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Blog # the website title (if blank, full name will be used instead)
+title: # the website title (if blank, full name will be used instead)
 first_name: Florian
 middle_name:
 last_name: Kark
 contact_note: >
   Email is the fastest way to reach me.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  AI Architect at Capgemini, Researcher at the Max-Planck-Institute for Sustainable Materials, 
-  and Lecturer at Heinrich-Heine-University. Passionate about interdisciplinary ai research and making foundational models better without scaling.
+  Researcher at the Max-Planck-Institute for Sustainable Materials, and Lecturer at Heinrich-Heine-University. 
+  Passionate about interdisciplinary ai research and foundational models.
 footer_text: >
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: AI, Machine Learning, Generative AI, Computer Vision, NLP, Data Engineering, Research # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🫧 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: prof_pic # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://floriankark.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -87,7 +87,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Curious Thoughts in Bytes # blog_name will be displayed in your blog page
+blog_name: Curious Thoughts # blog_name will be displayed in your blog page
 blog_description: Things I learn about nature, ai, research, and the world in between.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
