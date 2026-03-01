@@ -29,7 +29,7 @@ latest_posts:
 
 Hey, thanks for stopping by! 👋
 
-I’m a Phd Candidate at the [MPI of sustainable Materials](https://www.mpie.de/). 
+I’m a Masters student at the [Heinrich-Heine-Universität Düsseldorf](https://www.hhu.de/) and the [MPI of sustainable Materials](https://www.mpie.de/). 
 
 My focus lies on solving challenging problems at the intersection of AI & Matrial Science, 
 with the vision to build a Foundational Model able to incorporate all scales of Material Design, from atomistic to processing, eventually building a fully-integrated AI platform for material discovery.
