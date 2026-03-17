@@ -57,7 +57,8 @@ layout: default
                 // Scale to container width
                 const unscaledViewport = page.getViewport({ scale: 1 });
                 const containerWidth = viewer.clientWidth || 800;
-                const scale = (containerWidth / unscaledViewport.width) * 1.5;
+                const devicePixelScale = Math.min(Math.max(window.devicePixelRatio || 1, 1.25), 1.5);
+                const scale = (containerWidth / unscaledViewport.width) * devicePixelScale;
                 const viewport = page.getViewport({ scale });
 
                 const canvas = document.createElement("canvas");
@@ -73,7 +74,7 @@ layout: default
               }
             }).catch(function (err) {
               viewer.innerHTML =
-                "<p>Failed to load PDF.</p>";
+                "<p>Failed to load PDF. Please use the Download CV link above.</p>";
               console.error(err);
             });
 
