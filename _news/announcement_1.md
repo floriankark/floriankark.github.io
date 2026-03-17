@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Hello there! This website just launched :) I look forwarding to connecting and discussing with interested people 
+Hello there! This website just launched :) I look forwarding to connecting and discussing with interested people

@@ -27,73 +27,74 @@ layout: default
     </header>
 
     <article>
-  <p class="text-center text-monospace mt-3">
-    {% if page.cv_pdf %}
-      <a
-        {% if page.cv_pdf contains '://' %}
-          href="{{ page.cv_pdf }}"
-        {% else %}
-          href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
+      <p class="text-center text-monospace mt-3">
+        {% if page.cv_pdf %}
+          <a
+            {% if page.cv_pdf contains '://' %}
+              href="{{ page.cv_pdf }}"
+            {% else %}
+              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
+            {% endif %}
+            target="_blank"
+            rel="noopener noreferrer"
+            >Download CV</a
+          >
         {% endif %}
-        target="_blank"
-        rel="noopener noreferrer"
-      >Download CV</a>
-    {% endif %}
-  </p>
+      </p>
 
-  <div class="cv-pdf-wrapper">
-    <div id="pdf-viewer" class="cv-pdf-viewer"></div>
-  </div>
+      <div class="cv-pdf-wrapper">
+        <div id="pdf-viewer" class="cv-pdf-viewer"></div>
+      </div>
 
-  {% if page.cv_pdf %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-    <script>
-      (function () {
-        const url =
-          {% if page.cv_pdf contains '://' %}
-            "{{ page.cv_pdf }}";
-          {% else %}
-            "{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}";
-          {% endif %}
+      {% if page.cv_pdf %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+        <script>
+          (function () {
+            const url =
+              {% if page.cv_pdf contains '://' %}
+                "{{ page.cv_pdf }}";
+              {% else %}
+                "{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}";
+              {% endif %}
 
-        const viewer = document.getElementById("pdf-viewer");
+            const viewer = document.getElementById("pdf-viewer");
 
-        // pdf.js worker
-        pdfjsLib.GlobalWorkerOptions.workerSrc =
-          "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+            // pdf.js worker
+            pdfjsLib.GlobalWorkerOptions.workerSrc =
+              "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 
-        const loadingTask = pdfjsLib.getDocument(url);
-        loadingTask.promise.then(async function (pdf) {
-          for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-            const page = await pdf.getPage(pageNum);
+            const loadingTask = pdfjsLib.getDocument(url);
+            loadingTask.promise.then(async function (pdf) {
+              for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                const page = await pdf.getPage(pageNum);
 
-            // Scale to container width
-            const unscaledViewport = page.getViewport({ scale: 1 });
-            const containerWidth = viewer.clientWidth || 800;
-            const scale = containerWidth / unscaledViewport.width;
-            const viewport = page.getViewport({ scale });
+                // Scale to container width
+                const unscaledViewport = page.getViewport({ scale: 1 });
+                const containerWidth = viewer.clientWidth || 800;
+                const scale = containerWidth / unscaledViewport.width;
+                const viewport = page.getViewport({ scale });
 
-            const canvas = document.createElement("canvas");
-            canvas.className = "cv-pdf-page";
-            const context = canvas.getContext("2d");
+                const canvas = document.createElement("canvas");
+                canvas.className = "cv-pdf-page";
+                const context = canvas.getContext("2d");
 
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
 
-            viewer.appendChild(canvas);
+                viewer.appendChild(canvas);
 
-            await page.render({ canvasContext: context, viewport }).promise;
-          }
-        }).catch(function (err) {
-          viewer.innerHTML =
-            "<p>Failed to load PDF. Please use the download link above.</p>";
-          console.error(err);
-        });
+                await page.render({ canvasContext: context, viewport }).promise;
+              }
+            }).catch(function (err) {
+              viewer.innerHTML =
+                "<p>Failed to load PDF. Please use the download link above.</p>";
+              console.error(err);
+            });
 
-        // Re-render on resize is optional; simplest is to refresh page if you care about perfect scaling.
-      })();
-    </script>
-  {% endif %}
-</article>
+            // Re-render on resize is optional; simplest is to refresh page if you care about perfect scaling.
+          })();
+        </script>
+      {% endif %}
+    </article>
   </div>
 {% endunless %}
