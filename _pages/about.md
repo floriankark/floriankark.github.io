@@ -31,7 +31,7 @@ Hey, thanks for stopping by! 👋
 
 I’m a Masters student at the [Heinrich-Heine-Universität Düsseldorf](https://www.hhu.de/) and the [MPI of sustainable Materials](https://www.mpie.de/).
 
-My focus lies on solving challenging problems at the intersection of AI & Matrial Science,
+My focus lies on solving challenging problems at the intersection of AI & Material Science,
 with the vision to build a Foundational Model able to incorporate all scales of Material Design, from atomistic to processing, eventually building a fully-integrated AI platform for material discovery.
 
 As a scientist, I’m broadly interested in all aspects of machine learning, and particularly in self correcting active learning optimization with foundation models, robust and scalable data-driven systems, and applications to natural and engineering sciences.
