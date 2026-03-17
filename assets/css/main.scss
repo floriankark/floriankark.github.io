@@ -23,3 +23,28 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+
+.cv-pdf-wrapper {
+  /* controls the visible height of the viewer */
+  height: 85vh;
+  width: 100%;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.cv-pdf-viewer {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+  padding: 1rem 0;
+}
+
+.cv-pdf-page {
+  display: block;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.12);
+  border-radius: 4px;
+}
