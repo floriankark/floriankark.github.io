@@ -13,7 +13,6 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Passionate about interdisciplinary ai research and foundational models.
 footer_text: >
 keywords: AI, Machine Learning, Generative AI, Computer Vision, NLP, Data Engineering, Research # add your own keywords or leave empty
-
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: prof_pic.jpg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
