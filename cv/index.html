@@ -21,8 +21,7 @@
                 // Scale to container width
                 const unscaledViewport = page.getViewport({ scale: 1 });
                 const containerWidth = viewer.clientWidth || 800;
-                const devicePixelScale = Math.min(Math.max(window.devicePixelRatio || 1, 1.25), 1.5);
-                const scale = (containerWidth / unscaledViewport.width) * devicePixelScale;
+                const scale = (containerWidth / unscaledViewport.width) * 2.0;
                 const viewport = page.getViewport({ scale });
 
                 const canvas = document.createElement("canvas");
