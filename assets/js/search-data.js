@@ -44,6 +44,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
+        },{id: "nav-favorite-quotes",
+          title: "favorite quotes",
+          description: "A list of quotes I can connect with and want to share.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/favorite-quotes/";
+          },
         },{id: "dropdown-bookshelf",
               title: "bookshelf",
               description: "",
