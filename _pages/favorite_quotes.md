@@ -26,3 +26,7 @@ nav_order: 7
 > Not everything that is faced can be changed, but nothing can be changed until it is faced.
 >
 > -- James Baldwin
+
+> The right question is usually more important than the right answer.
+>
+> -- Plato
